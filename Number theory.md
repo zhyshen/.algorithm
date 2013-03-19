@@ -24,17 +24,30 @@ Each takes just O(log 2 N ) time to compute, and in this case there are only log
 
 Here is the example code for this algorithm(C++.):
 
+
 /*this function wiil return 
+
  *(x^y) mod N
+ 
  */
+ 
+ 
 int modPower(int x, int y, int N)  {
-  if (y == 0)
+
+  	if (y == 0)
+  	
 		return 1;
+		
 	int z = modPower(x, y / 2, N);
+	
 	if ( (y & 1) ) {
+	
 		return (z * z * x) % N;
+		
 	} else {
+	
 		return  ( z * z ) % N;
+		
 	}
 }
 
