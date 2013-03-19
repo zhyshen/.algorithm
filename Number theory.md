@@ -9,7 +9,9 @@ Modular arithmetic
 
   To compute modular exponentiation (x ^ y) mod N, since (x ^ y) may be very large, that means it is too large to present and process by compute neither int nor long long.
 Consider two rules of modular arithmetic:
+
 (a * b) mod p = ((a mod p) * (b mod p)) mod p 
+
 (a ^ b) mod p = (a mod p) ^ b mod p
 
 So here’s an idea: calculate x ^ y mod N by repeatedly multiplying by x modulo N,
@@ -25,9 +27,9 @@ Each takes just O(log 2 N ) time to compute, and in this case there are only log
 Here is the example code for this algorithm(C++.):
 
 
-/*this function wiil return 
+/*
 
- *(x^y) mod N
+ *this function wiil return (x^y) mod N
  
  */
  
